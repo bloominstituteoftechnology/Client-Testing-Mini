@@ -1,0 +1,18 @@
+{
+  "name": "LS-Testing-Mini",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/app.test.js -R nyan"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "sinon": "^3.0.0",
+    "sinon-chai": "^2.12.0"
+  }
+}
