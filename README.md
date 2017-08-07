@@ -33,3 +33,5 @@ Topics:
 * [Chai](http://chaijs.com/)
 * [Assert](http://chaijs.com/api/assert/)
 * [Expect](http://chaijs.com/api/bdd/)
+* [BDD vs TDD](https://codeutopia.net/blog/2015/03/01/unit-testing-tdd-and-bdd/)
+* [more on TDD vs BDD](http://chaijs.com/guide/styles/)
