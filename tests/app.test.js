@@ -111,13 +111,14 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const newCbInvoker = cases.callBackInvoker;
       // pass our spy `callBack` to our newCbInvoker fn.
       newCbInvoker(callBack);
-      // callBack(newCbInvoker);
+      // callBack(newCbInvoker); - NOPE
       // write a test that to see if our callback has been called.
         // hint - you will need to look at https://github.com/domenic/sinon-chai to see syntax around this
       // mySpy.should.have.been.calledWith("foo");
       // callBack.should.have.been.calledWith("newCbInvoker");
       // expect(mySpy).to.have.been.calledWith("foo");
-      expect(callBack).to.have.been.calledWith("newCbInvoker");
+      // expect(callBack).to.have.been.calledWith(newCbInvoker);
+      expect(callBack).to.have.been.calledOnce;
     });
   });
 
@@ -128,10 +129,10 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
     });
     //similiar to above where we are utilizing our spy from sinon, this assertion should test if a cb is called x times.
     it('should call a callback for n times passed to cases.iterator', () => {
-      const iterator = cases.iterator;
+      const newIterator = cases.iterator;
       const callBack = sinon.spy();
-      const count = iterator(4, callBack);
-      expect(count).should.have.callCount(4);
+      newIterator(4, callBack);
+      expect(callBack).to.have.callCount(4);
     });
   });
 
