@@ -10,8 +10,8 @@ Topics:
 
 ## Project Description
 
-* The objective is to get you exposed to using TDD with Mocha/Chai and Sinon.
-* You will be writing tests for the code inside of `src/app.js`.
+* The objective is to get you exposed to using TDD with Mocha/Chai and Sinon. - OKAY √
+* You will be writing tests for the code inside of `src/app.js`. - OKAY √
 
 ### Initialize Project
 
