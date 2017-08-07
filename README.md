@@ -15,12 +15,18 @@ Topics:
 
 ### Initialize Project
 
-* cd into repo and run `npm install`
+* cd into repo and run `npm install` - DONE √
+```console
+$  npm install
+  npm WARN LS-Testing-Mini@1.0.0 No repository field.
+
+  added 54 packages in 5.589s
+```
 
 ### Pre Set Up
 
-* You'll notice we have two directories `src` and `test`. Inside of `src/app.js` you'll see all the code that we want to test, being exported out of `app.js` in the bottom of the file.
-* Go ahead and run `npm test` and it will exectute the testing suites.
+* You'll notice we have two directories `src` and `test`. Inside of `src/app.js` you'll see all the code that we want to test, being exported out of `app.js` in the bottom of the file. - OKAY √
+* Go ahead and run `npm test` and it will exectute the testing suites. - DONE √
 
 ### Steps for implementing Tests
 
