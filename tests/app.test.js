@@ -115,9 +115,10 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
     });
     //similiar to above where we are utilizing our spy from sinon, this assertion should test if a cb is called x times.
     it('should call a callback for n times passed to cases.iterator', () => {
-      const spy = sinon.spy();
-      cases.spy(iterator);
-      expect(spy.should.have.callCount(n));
+      const newIterator = cases.iterator;
+      const callBack = sinon.spy();
+      newIterator(4, callBack);
+      expect(callBack).to.have.callCount(4);
     });
   });
 
