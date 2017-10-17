@@ -11,10 +11,18 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
   describe('apples', () => {
     it('should be an array', () => {
       const apples = cases.apples;
-      expect(apples).to.be.an('array'); // Begin here something is wrong, fix it.
+      expect(apples).to.be.an('array'); // Begin here something is wrong, fix it. (Fixed it!)
     });
-    // write a test to check the correct length of the apples array.
-    // write a test to check to see if the apples array contains 'Red Delicious'.
+    it('should have length four', () => {
+      const apples = cases.apples;
+      expect(apples.length).to.equal(4);
+    });
+    it('contains Red Delicious', () => {
+      const apples = cases.apples;
+      expect(apples.includes('Red Delicious')).to.equal(true);
+    });
+    // write a test to check the correct length of the apples array. Done!
+    // write a test to check to see if the apples array contains 'Red Delicious'. Done!
   });
 
   describe('Ben', () => {
@@ -22,7 +30,11 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const Ben = cases.Ben;
       expect(Ben).to.be.an('object');
     });
-    // write a test to check if Ben's favorite band is 'Beastie Boys'.
+    it('should like Beastie Boys the best', () => {
+      const Ben = cases.Ben;
+      expect(Ben.favBand).to.equal('Beastie Boys');
+    });
+    // write a test to check if Ben's favorite band is 'Beastie Boys'. Done!
   });
 
   describe('Sean', () => {
@@ -30,7 +42,11 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const Sean = cases.Sean;
       expect(Sean).to.be.an('object');
     });
-    // write a test to check if Seans's favorite food is 'Pizza'.
+    it('should love pizza', () => {
+      const Sean = cases.Sean;
+      expect(Sean.favFood).to.equal('Pizza');
+    })
+    // write a test to check if Seans's favorite food is 'Pizza'. Done!
   });
 
   describe('Ryan', () => {
@@ -38,7 +54,11 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const Ryan = cases.Ryan;
       expect(Ryan).to.be.an('object');
     });
-    // write a test to see if Ryan's favBook is `not` 'Harry Potter'.
+    it('should love Harry Potter', () => {
+      const Ryan = cases.Ryan;
+      expect(Ryan.favBook).to.not.equal('Harry Potter');
+    })
+    // write a test to see if Ryan's favBook is `not` 'Harry Potter'. Done!
   });
 
   describe('Austen', () => {
@@ -46,7 +66,11 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const Austen = cases.Austen;
       expect(Austen).to.be.an('object');
     });
-    // write a test to see if Austen's favColor is not 'Gold'.
+    it('should love gold', () => {
+      const Austen = cases.Austen;
+      expect(Austen.favColor).to.not.equal('Gold');
+    })
+    // write a test to see if Austen's favColor is not 'Gold'. Done!
   });
 
   describe('Karthik', () => {
@@ -54,13 +78,20 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       const Karthik = cases.Karthik;
       expect(Karthik).to.be.an('object');
     });
-    // write a test to check if Karthik's favActivity is 'Rock Climbing'.
+    it('should love Rock Climbing', () => {
+      const Karthik = cases.Karthik;
+      expect(Karthik.favActivity).to.equal('Rock Climbing');
+    })    // write a test to check if Karthik's favActivity is 'Rock Climbing'.
   });
 
   describe('addNums', () => {
     it('should be a function', () => {
       const addNums = cases.addNums;
       expect(addNums).to.be.a('function');
+    });
+    it('should return three', () => {
+      const addNums = cases.addNums;
+      expect(addNums(1,2)).to.equal(3);
     });
     // write a test to check if 'addNums' returns the expected value
       // i.e. if is called addNums(1, 2); the return value should be 3.
