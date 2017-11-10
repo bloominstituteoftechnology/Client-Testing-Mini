@@ -15,6 +15,14 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
     });
     // write a test to check the correct length of the apples array.
     // write a test to check to see if the apples array contains 'Red Delicious'.
+    it('should have 4 elements', () => {
+      const apples = cases.apples;
+      expect(apples).to.have.lengthOf(4);
+    });
+    it('should inclue Red Delicious', () => {
+      const apples = cases.apples;
+      expect(apples).to.include('Red Delicious');
+    });
   });
 
   describe('Ben', () => {
@@ -102,7 +110,7 @@ describe('Cases from app.js', () => { // this is a testing suite made up of suit
       // pass our spy `callBack` to our newCbInvoker fn. 
       // write a test that to see if our callback has been called.
         // hint - you will need to look at https://github.com/domenic/sinon-chai to see syntax around this
-      callback.should.have.been.calledAfter(newCbInvoker);
+      expect(callBack).to.have.been.calledAfter(newCbInvoker);
 
     });
   });
