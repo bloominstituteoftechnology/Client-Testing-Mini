@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "find ./tests -name '*test.js' | xargs mocha -R nyan --watch "
+    "scripts": {
+      "test": "mocha -R nyan tests --watch "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^4.0.1",
-    "sinon": "^4.1.2",
-    "sinon-chai": "^2.12.0"
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0",
+    "sinon": "^4.2.2",
+    "sinon-chai": "^2.14.0"
   }
 }
