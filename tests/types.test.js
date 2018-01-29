@@ -9,7 +9,7 @@ describe('Cases from app.js', () => {
   describe('apples', () => {
     it('should be an array', () => {
       const apples = cases.apples;
-      expect(apples).to.be.an('array'); // Begin here something is wrong, fix it.
+      expect(apples).to.be.an('array'); 
     });
     // write a test to check the correct length of the apples array.
   describe('apples', () => {
@@ -43,15 +43,25 @@ describe('Cases from app.js', () => {
       expect(Sean).to.be.an('number');
     });
     // write a test to check if Seans's favorite food is 'Pizza'.
-  });
+  describe('Sean', () => {
+      it('favorite food should be Pizza', () => {
+        const Sean = cases.Sean;
+        expect(Sean).to.be.equal.toString('favorite food should be Pizza');
+      });
 
   describe('Ryan', () => {
     it('should be an object', () => {
       const Ryan = cases.Ryan;
-      expect(Ryan).to.be.an('string');
+      expect(Ryan).to.be.an('function');
     });
     // write a test to see if Ryan's favBook is `not` 'Harry Potter'.
   });
+
+  describe('Ryan', () => {
+    it('should be Ryans favBook is not Harry Potter', () => {
+      const Ryan = cases.Ryan;
+      expect(Ryan).to.be.an('Ryans favBook is not Harry Potter');
+    });
 
   describe('Austen', () => {
     it('should be an object', () => {
@@ -60,6 +70,11 @@ describe('Cases from app.js', () => {
     });
     // write a test to see if Austen's favColor is not 'Gold'.
   });
+  describe('Austen', () => {
+    it('favColor is not Gold', () => {
+      const Austen = cases.Austen;
+      expect(Austen).to.be.an('favColor is not Gold');
+    });
 
   describe('Ivan', () => {
     it('should be an object', () => {
@@ -68,4 +83,8 @@ describe('Cases from app.js', () => {
     });
     // write a test to check if Ivan's favActivity is 'Rock Climbing'.
   });
-});
+  describe('Ivan', () => {
+    it('favActivity is Rock Climbing', () => {
+      const Ivan = cases.Ivan;
+      expect(Ivan).to.be.an('favActivity is Rock Climbing');
+    });
