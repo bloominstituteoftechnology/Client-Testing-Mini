@@ -50,7 +50,7 @@ describe('Cases from app.js', () => {
     });
     // write a test to see if Ryan's favBook is `not` 'Harry Potter'.
     it('Ryan\'s favorite book should equal \'Harry Potter\'', () => {
-      expect(Ryan.favBook).to.be.equal('Harry Potter');
+      expect(Ryan.favBook).not.to.be.equal('Harry Potter');
     });
   });
 
@@ -61,7 +61,7 @@ describe('Cases from app.js', () => {
     });
     // write a test to see if Austen's favColor is not 'Gold'.
     it('Austen\'s favorite color should equal \'Gold\'', () => {
-      expect(Austen.favColor).to.be.equal('Gold');
+      expect(Austen.favColor).not.to.be.equal('Gold');
     });
   });
 
