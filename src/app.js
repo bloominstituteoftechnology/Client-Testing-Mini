@@ -5,7 +5,7 @@ const Ben = {
   favFood: 'Mexican',
   favBook: 'Catcher in the Rye',
   favColor: 'Blue Green',
-  favActivity: 'Coding',
+  favActivity: 'Coding'
 };
 
 const Sean = {
@@ -13,7 +13,7 @@ const Sean = {
   favFood: 'Pizza',
   favBook: 'Life of Pi',
   favColor: 'Green',
-  favActivity: 'Surfing',
+  favActivity: 'Surfing'
 };
 
 const Ryan = {
@@ -21,7 +21,7 @@ const Ryan = {
   favFood: 'Chinese',
   favBook: 'The Giver',
   favColor: 'Silver',
-  favActivity: 'Mountain Biking',
+  favActivity: 'Mountain Biking'
 };
 
 const Austen = {
@@ -29,29 +29,15 @@ const Austen = {
   favFood: 'Middle Eastern',
   favBook: '50 Shades of Grey',
   favColor: 'Yellow',
-  favActivity: 'Comedy Clubs',
+  favActivity: 'Comedy Clubs'
 };
 
-const Karthik = {
+const Ivan = {
   favBand: 'Smashing Pumpkins',
   favFood: 'Spaghetti',
   favBook: 'The Puppy who Lost His Way',
   favColor: 'Red',
-  favActivity: 'Rock Climbing',
-};
-
-const addNums = (x, y) => {
-  return x + y;
-};
-
-const callBackInvoker = (cb) => {
-  return (cb());
-};
-
-const iterator = (num, cb) => {
-  for (let i = 1; i <= num; i++) {
-    cb();
-  }
+  favActivity: 'Rock Climbing'
 };
 
 module.exports = {
@@ -60,8 +46,5 @@ module.exports = {
   Sean,
   Ryan,
   Austen,
-  Karthik,
-  addNums,
-  callBackInvoker,
-  iterator,
+  Ivan
 };
