@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "find ./tests -name '*test.js' | xargs mocha -R nyan --watch "
+  "test": "mocha -R nyan tests --watch "
+    
   },
   "keywords": [],
   "author": "",
