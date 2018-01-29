@@ -22,6 +22,9 @@ describe('functions', () => {
       expect(addNums).to.be.a('function');
     });
     // write a test to check if 'addNums' returns the expected value
+    it('should return the proper output given specific input',() => {
+      expect(addNums(1, 2)).to.equal(3);
+    })
     // i.e. if is called addNums(1, 2); the return value should be 3.
   });
 
