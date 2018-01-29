@@ -72,6 +72,11 @@ describe('Cases from app.js', () => {
       expect(Austen).to.be.an('object');
     });
     // write a test to see if Austen's favColor is not 'Gold'.
+    it('should have prop favColor is not equal to `Gold`', () => {
+      const favColor = cases.Austen.favColor;
+      assert.typeOf(favColor, 'string');
+      expect(favColor).to.not.equal('Gold', 'Austen\'s favorite color is not Gold');
+    });
   });
 
   describe('Ivan', () => {
@@ -80,5 +85,11 @@ describe('Cases from app.js', () => {
       expect(Ivan).to.be.an('object');
     });
     // write a test to check if Ivan's favActivity is 'Rock Climbing'.
+    it('should have prop favActivity equal to `Rock Climbing`', () => {
+      const favActivity = cases.Ivan.favActivity;
+      assert.typeOf(favActivity, 'string');
+      expect(favActivity).to.equal('Rock Climbing', 'Ivan\'s favorite activity is Rock Climbing');
+      assert.equal(favActivity, 'Rock Climbing', 'Ivan\'s favorite activity is Rock Climbing');
+    });
   });
 });
