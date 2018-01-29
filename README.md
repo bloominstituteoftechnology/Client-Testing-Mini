@@ -1,12 +1,12 @@
 # Testing - Mini
 
 Topics:
-  * Mocha
-  * Chai
-  * Sinon
-  * Assert
-  * Expect
 
+* Mocha
+* Chai
+* Sinon
+* Assert
+* Expect
 
 ## Project Description
 
@@ -19,12 +19,15 @@ Topics:
 
 ### Pre Set Up
 
-* You'll notice we have two directories `src` and `test`. Inside of `src/app.js` you'll see all the code that we want to test, being exported out of `app.js` in the bottom of the file.
-* Go ahead and run `npm test` and it will exectute the testing suites.
+* You'll notice we have two directories `src` and `test`. Inside of `src/app.js & src/functions.js` you'll see all the code that we want to test, being exported out of the given files.
+* Go ahead and run `npm test` and it will execute the testing suites.
+* We have installed a watch command that will re run on save.
 
 ### Steps for implementing Tests
 
-* Step 1: You have a broken test suite already, go ahead and change each test assertion such that it passes the expected test. Everything begins on line 14 inside of `tests/app.test.js` begin there.
+* Step 1: You have a broken test suite already, go ahead and change each test assertion such that it passes the expected test. Everything begins on line 14 inside of `tests/types.test.js` begin there.
+* Step 2: After you have all of your tests passing inside of `types.test.js` you can start testing the functions found in the `src/functions.js` file.
+  * Write your testing code for these functions inside of `tests/functions.test.js`
 
 ### Resources
 
