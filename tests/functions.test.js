@@ -6,7 +6,7 @@ const expect = chai.expect;
 const assert = chai.assert;
 chai.use(sinonChai);
 
-describe('functions', () => {
+describe('functions', () => { 
   let testArray = [];
   beforeEach = () => {
     testArray = [1, 2, 3, 4, 'eggs', 'cheese', 'milk'];
@@ -16,6 +16,14 @@ describe('functions', () => {
     testArray = [];
   };
 
+  each = (arr) => {
+    for(let i = 0; i > arr.length; i++){
+      return cb(arr[i]);
+    }
+  };
+
+  
+
   describe('addNums', () => {
     const addNums = cases.addNums;
     it('should be a function', () => {
@@ -23,6 +31,7 @@ describe('functions', () => {
     });
     // write a test to check if 'addNums' returns the expected value
     // i.e. if is called addNums(1, 2); the return value should be 3.
+  describe
   });
 
   describe('callBackInvoker', () => {
