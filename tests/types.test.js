@@ -21,7 +21,7 @@ describe('Cases from app.js', () => {
   describe('apples', () => {
     it('should contain Red Delicious', () => {
       const apples = cases.apples; 
-      expect(apples).to.include('RedDelicious');
+      expect(apples).to.include('Red Delicious');
   });
 });
 
@@ -51,7 +51,7 @@ describe('Cases from app.js', () => {
       it('Sean\'s favorite food should be Pizza', () => {
         const favFood = cases.Sean.favFood;
         assert.typeOf(favFood, 'string');
-        expect(favFood).to.equal('Sean\'s favorite food should be Pizza');
+        expect(favFood).to.equal('Pizza');
       });
     });
 

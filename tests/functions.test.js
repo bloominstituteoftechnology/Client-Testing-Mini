@@ -50,7 +50,7 @@ chai.use(sinonChai);
     });
  
     it('should call a callback for n times passed to cases.iterator', () => {
-      const callBack = sinon.spy; 
+      const callBack = sinon.spy(); 
       const iterator = cases.iterator;
       iterator(4, callBack);
       expect(callBack).to.have.callCount(4);
