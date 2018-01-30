@@ -23,12 +23,16 @@ describe('functions', () => {
     });
     // write a test to check if 'addNums' returns the expected value
     // i.e. if is called addNums(1, 2); the return value should be 3.
+    it('should return the sum of two numbers', () => {
+      const sum = addNums(1, 2);
+      expect(sum).to.be.equal(3);
+    });
   });
 
   describe('callBackInvoker', () => {
     it('should be a function', () => {
       const callBackInvoker = cases.callBackInvoker;
-      expect(callBackInvoker).to.be.a('number');
+      expect(callBackInvoker).to.be.a('function');
     });
     it('should invoke a given callback passed to it', () => {
       // this is where you're going to be using 'chai's sinon' spy function.
@@ -37,15 +41,21 @@ describe('functions', () => {
       // pass our spy `callBack` to our newCbInvoker fn.
       // write a test that to see if our callback has been called.
       // hint - you will need to look at https://github.com/domenic/sinon-chai to see syntax around this
+      newCbInvoker(callBack);
+      expect(callBack).to.have.callCount(1);
     });
   });
 
   describe('iterator', () => {
+    const iterator = cases.iterator;
     it('should be a function', () => {
-      const iterator = cases.iterator;
-      expect(iterator).to.be.a('string');
+      expect(iterator).to.be.a('function');
     });
     //similiar to above where we are utilizing our spy from sinon, this assertion should test if a cb is called x times.
-    it('should call a callback for n times passed to cases.iterator', () => {});
+    it('should call a callback for n times passed to cases.iterator', () => {
+      const callBack = sinon.spy();
+      iterator(5, callBack);
+      expect(callBack).to.have.callCount(5);
+    });
   });
 });
