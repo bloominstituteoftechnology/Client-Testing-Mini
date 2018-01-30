@@ -6,15 +6,27 @@ const expect = chai.expect;
 const assert = chai.assert;
 chai.use(sinonChai);
 
-describe('functions', () => {
+describe(each, () => {
   let testArray = [];
-  beforeEach = () => {
+  const each = cases.each;
+  beforeEach(() => {
     testArray = [1, 2, 3, 4, 'eggs', 'cheese', 'milk'];
-  };
+  });
 
-  afterEach = () => {
+  afterEach(() => {
     testArray = [];
-  };
+  });
+  it('should be a function', () =>{
+    expect(each).to.be.an('function');
+    it('should call a callback for each item in the array', () => {
+      const myLength = testArray.length;
+      const callBack = sinon.spy();
+      each(testArray, callBack);
+      expect(callBack).to.have.callCount(7);
+      expect(callBack).to.have.been.calledWith('bananas');
+    });
+  });
+});
 
   describe('addNums', () => {
     const addNums = cases.addNums;

@@ -10,6 +10,11 @@ const iterator = (num, cb) => {
   for (let i = 1; i <= num; i++) {
     cb();
   }
+  const each = (array, cb) => {
+    for (let i = 0; 1 < array.length; i++) {
+      cb(array)
+    }
+  }
 };
 
 module.exports = {
