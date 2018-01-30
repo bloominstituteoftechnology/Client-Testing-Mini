@@ -23,6 +23,9 @@ describe('functions', () => {
     });
     // write a test to check if 'addNums' returns the expected value
     // i.e. if is called addNums(1, 2); the return value should be 3.
+    it('should output the correct output given specific inputs', () => {
+      expect(addNums(1, 2)).to.be(2);
+    })
   });
 
   describe('callBackInvoker', () => {
