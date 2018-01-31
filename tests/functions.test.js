@@ -7,13 +7,23 @@ const assert = chai.assert;
 chai.use(sinonChai);
 
 describe('functions', () => {
+  let testArray = [];
+  beforeEach = () => {
+    testArray = [1, 2, 3, 4, 'eggs', 'cheese', 'milk'];
+  };
+
+  afterEach = () => {
+    testArray = [];
+  };
+
   describe('addNums', () => {
     const addNums = cases.addNums;
     it('should be a function', () => {
       expect(addNums).to.be.a('function');
     });
-    it('should return the proper output given specific input', () => {
-      expect(addNums(1, 2)).to.equal(3);
+    it('should return the sum of two numbers', () => {
+      const sum = addNums(1, 2);
+      expect(sum).to.be.equal(3);
     });
   });
 
@@ -29,11 +39,9 @@ describe('functions', () => {
       newCbInvoker(callBack);
       expect(callBack).to.have.been.calledOnce;
     });
-
   });
 
   describe('iterator', () => {
-
     it('should be a function', () => {
       const iterator = cases.iterator;
       expect(iterator).to.be.a('function');
