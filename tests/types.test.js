@@ -13,8 +13,12 @@ describe('Cases from app.js', () => {
     });
     it('should have a length of 3', () => {
       const apples = cases.apples;
-      assert.equal(apples.length, 4);
+      // assert.equal(apples.length, 4);
+      expect(apples).to.have.lengthOf(4);
     })
+    // it('should have the string Red Delicious', () => {
+    //   expect(apples).t
+    // })
     // write a test to check the correct length of the apples array.
     // write a test to check to see if the apples array contains 'Red Delicious'.
   });
@@ -62,7 +66,7 @@ describe('Cases from app.js', () => {
     });
     it('favorite color should not be Gold', () => {
       const Austen = cases.Austen;
-      assert.equal(Austen.favColor).to.not.equal('Gold')
+      assert.equal(Austen.favColor.includes('Gold'), false)
     })
     // write a test to see if Austen's favColor is not 'Gold'.
   });
