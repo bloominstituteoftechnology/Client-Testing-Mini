@@ -28,7 +28,7 @@ describe('functions', () => {
   describe('callBackInvoker', () => {
     it('should be a function', () => {
       const callBackInvoker = cases.callBackInvoker;
-      expect(callBackInvoker).to.be.a('number');
+      expect(callBackInvoker).to.be.a('function');
     });
     it('should invoke a given callback passed to it', () => {
       // this is where you're going to be using 'chai's sinon' spy function.
@@ -43,7 +43,7 @@ describe('functions', () => {
   describe('iterator', () => {
     it('should be a function', () => {
       const iterator = cases.iterator;
-      expect(iterator).to.be.a('string');
+      expect(iterator).to.be.a('function');
     });
     //similiar to above where we are utilizing our spy from sinon, this assertion should test if a cb is called x times.
     it('should call a callback for n times passed to cases.iterator', () => {});
