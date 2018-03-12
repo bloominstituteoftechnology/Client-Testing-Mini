@@ -11,8 +11,12 @@ describe('Cases from app.js', () => {
       const apples = cases.apples;
       expect(apples).to.be.an('object'); // Begin here something is wrong, fix it.
     });
-    // write a test to check the correct length of the apples array.
-    // write a test to check to see if the apples array contains 'Red Delicious'.
+    it('should have a length of 4', () => {
+      expect(apples.length).to.be.equal(4);
+    });
+    it('should contain \'Red Delicous\'', () => {
+      expect(apples.includes('Red Delicious')).to.be.true;
+    });
   });
 
   describe('Ben', () => {
