@@ -15,12 +15,12 @@ Topics:
 
 ### Initialize Project
 
-* cd into repo and run `npm install`
+* cd into repo and run `yarn install` or `npm install`
 
 ### Pre Set Up
 
 * You'll notice we have two directories `src` and `test`. Inside of `src/app.js & src/functions.js` you'll see all the code that we want to test, being exported out of the given files.
-* Go ahead and run `npm test` and it will execute the testing suites.
+* Go ahead and run `yarn test` or `npm test` and it will execute the testing suites.
 * We have installed a watch command that will re run on save.
 
 ### Steps for implementing Tests
