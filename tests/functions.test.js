@@ -25,8 +25,8 @@ describe('functions', () => {
       const x = 100;
       const y = 200;
       const concat = addNums(x,y)
-      console.log('addNums', concat)
-      expect(concat.to.equal(300));
+      console.log(concat)
+      expect(concat).to.equal(300);
     })
     // i.e. if is called addNums(1, 2); the return value should be 3.
   });
@@ -59,10 +59,10 @@ describe('functions', () => {
     it('should call a callback for n times passed to cases.iterator', () => {
       const newIterator = cases.iterator;
       const cb = sinon.spy();
-      newIterator(cb);
       const calledBack = cb.callCount
-      newIterator(calledBack);
+      newIterator(5,cb);
       console.log(calledBack)
+      expect(cb).have.callCount(5);
     });
   });
 });
